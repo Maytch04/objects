@@ -58,10 +58,8 @@ function ans6(){
 	var content = ""; 
 	var whoMade = items.filter(function(value){
 		return(value.who_made.includes('i_did'))
-	}).forEach(function(item){
-		content+=`<li>${item.title}</li>`
-	})
+	}).length;
 
-	document.querySelector('#answer6').innerHTML = content
+	document.querySelector('#answer6').innerHTML = whoMade;
 }
 ans6()
